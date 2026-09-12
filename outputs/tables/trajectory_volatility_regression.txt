@@ -1,0 +1,112 @@
+===============================================================================
+Dependent Variable: Zmijewski-style Distress Proxy Score
+(roa/leverage omitted from regressors — liquidity term also
+ omitted from the proxy itself; see method notes)
+===============================================================================
+
+--- Model (1) Baseline (N=322, R2=0.0219) ---
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        zmijewski_score   R-squared:                       0.022
+Model:                            OLS   Adj. R-squared:                  0.016
+Method:                 Least Squares   F-statistic:                    0.5629
+Date:                Sat, 12 Sep 2026   Prob (F-statistic):              0.578
+Time:                        22:22:51   Log-Likelihood:                -229.26
+No. Observations:                 322   AIC:                             464.5
+Df Residuals:                     319   BIC:                             475.9
+Df Model:                           2                                         
+Covariance Type:              cluster                                         
+===================================================================================================
+                                      coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+const                              -2.9316      1.328     -2.207      0.027      -5.535      -0.328
+emissions_trajectory_volatility  4.347e-05   6.61e-05      0.657      0.511   -8.61e-05       0.000
+size                                0.0701      0.121      0.577      0.564      -0.168       0.308
+==============================================================================
+Omnibus:                      152.823   Durbin-Watson:                   0.440
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               21.354
+Skew:                          -0.233   Prob(JB):                     2.31e-05
+Kurtosis:                       1.828   Cond. No.                     1.63e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+[2] The condition number is large, 1.63e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+--- Model (2) Year FE (N=322, R2=0.0288) ---
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        zmijewski_score   R-squared:                       0.029
+Model:                            OLS   Adj. R-squared:                 -0.019
+Method:                 Least Squares   F-statistic:                     2.978
+Date:                Sat, 12 Sep 2026   Prob (F-statistic):            0.00999
+Time:                        22:22:51   Log-Likelihood:                -228.12
+No. Observations:                 322   AIC:                             488.2
+Df Residuals:                     306   BIC:                             548.6
+Df Model:                          15                                         
+Covariance Type:              cluster                                         
+===================================================================================================
+                                      coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+const                              -2.9646      1.371     -2.162      0.031      -5.652      -0.278
+emissions_trajectory_volatility  4.255e-05   6.74e-05      0.632      0.528   -8.95e-05       0.000
+size                                0.0745      0.126      0.590      0.555      -0.173       0.322
+year_2011                           0.0175      0.065      0.272      0.786      -0.109       0.144
+year_2012                          -0.0192      0.062     -0.310      0.757      -0.141       0.102
+year_2013                           0.0771      0.064      1.211      0.226      -0.048       0.202
+year_2014                          -0.0073      0.060     -0.120      0.904      -0.125       0.111
+year_2015                          -0.0077      0.074     -0.104      0.917      -0.153       0.137
+year_2016                          -0.0165      0.056     -0.297      0.766      -0.125       0.092
+year_2017                          -0.0942      0.054     -1.746      0.081      -0.200       0.012
+year_2018                           0.0227      0.072      0.314      0.754      -0.119       0.164
+year_2019                          -0.0848      0.068     -1.253      0.210      -0.217       0.048
+year_2020                          -0.0252      0.071     -0.356      0.722      -0.164       0.114
+year_2021                          -0.0285      0.062     -0.459      0.646      -0.150       0.093
+year_2022                          -0.0082      0.082     -0.100      0.921      -0.169       0.153
+year_2023                          -0.0532      0.071     -0.753      0.451      -0.192       0.085
+==============================================================================
+Omnibus:                      163.168   Durbin-Watson:                   0.425
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               22.075
+Skew:                          -0.248   Prob(JB):                     1.61e-05
+Kurtosis:                       1.817   Cond. No.                     1.73e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+[2] The condition number is large, 1.73e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+--- Model (3) Sector FE (N=322, R2=0.8395) ---
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        zmijewski_score   R-squared:                       0.839
+Model:                            OLS   Adj. R-squared:                  0.836
+Method:                 Least Squares   F-statistic:                     3927.
+Date:                Sat, 12 Sep 2026   Prob (F-statistic):           4.80e-31
+Time:                        22:22:51   Log-Likelihood:                 61.703
+No. Observations:                 322   AIC:                            -109.4
+Df Residuals:                     315   BIC:                            -82.98
+Df Model:                           6                                         
+Covariance Type:              cluster                                         
+===================================================================================================
+                                      coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+const                              -2.4307      0.151    -16.091      0.000      -2.727      -2.135
+emissions_trajectory_volatility  5.835e-06    7.1e-06      0.822      0.411   -8.08e-06    1.98e-05
+size                                0.0105      0.016      0.654      0.513      -0.021       0.042
+sector_Manufacturing               -0.6171      0.039    -15.941      0.000      -0.693      -0.541
+sector_Mining                      -0.3373      0.030    -11.255      0.000      -0.396      -0.279
+sector_Transportation              -0.2984      0.037     -8.130      0.000      -0.370      -0.226
+sector_Utilities                    0.5720      0.028     20.291      0.000       0.517       0.627
+==============================================================================
+Omnibus:                        0.651   Durbin-Watson:                   2.324
+Prob(Omnibus):                  0.722   Jarque-Bera (JB):                0.748
+Skew:                           0.018   Prob(JB):                        0.688
+Kurtosis:                       2.767   Cond. No.                     1.90e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+[2] The condition number is large, 1.9e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.

@@ -1,0 +1,31 @@
+                             OLS Regression Results                             
+================================================================================
+Dep. Variable:     scope1_intensity_rev   R-squared:                       0.070
+Model:                              OLS   Adj. R-squared:                  0.055
+Method:                   Least Squares   F-statistic:                     1.940
+Date:                  Sat, 12 Sep 2026   Prob (F-statistic):              0.128
+Time:                          22:22:51   Log-Likelihood:                -3062.6
+No. Observations:                   322   AIC:                             6137.
+Df Residuals:                       316   BIC:                             6160.
+Df Model:                             5                                         
+Covariance Type:                cluster                                         
+====================================================================================
+                       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------
+const            -1.087e+04    1.3e+04     -0.835      0.404   -3.64e+04    1.46e+04
+leverage          4392.0096   6398.714      0.686      0.492   -8149.240    1.69e+04
+roa               2.542e+04   2.91e+04      0.873      0.383   -3.17e+04    8.25e+04
+operating_margin  -1.38e+04   1.49e+04     -0.929      0.353   -4.29e+04    1.53e+04
+size               938.0246    995.101      0.943      0.346   -1012.337    2888.386
+revenue_growth   -1197.6622    962.133     -1.245      0.213   -3083.409     688.085
+==============================================================================
+Omnibus:                      278.206   Durbin-Watson:                   0.210
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             4267.667
+Skew:                           3.691   Prob(JB):                         0.00
+Kurtosis:                      19.235   Cond. No.                     1.27e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+[2] The condition number is large, 1.27e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.

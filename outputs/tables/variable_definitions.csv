@@ -1,0 +1,16 @@
+Variable,Definition,Source
+scope1_intensity_rev,Scope 1 GHG emissions / revenue (metric tons CO₂e per $M),"EPA GHGRP, SEC EDGAR"
+log_scope1_intensity,ln(1 + scope1_intensity_rev),Derived
+size,ln(1 + total assets in $M),SEC EDGAR (Assets)
+leverage,Total debt / total assets,SEC EDGAR
+roa,Net income / total assets,SEC EDGAR
+operating_margin,Operating income / revenue,SEC EDGAR (OperatingIncomeLoss)
+capex_intensity,Capital expenditure / total assets,SEC EDGAR
+rd_intensity,R&D expense / revenue,SEC EDGAR
+revenue_growth,Year-over-year revenue growth rate,SEC EDGAR
+inverse_mills_ratio,Heckman Stage-1 IMR from Probit selection model,Derived (Heckman 1979)
+high_emission_naics,"=1 if firm's NAICS 2-digit code is in {21,22,31-33,48-49} (exclusion restriction)",EPA GHGRP
+selected,=1 if firm reports to EPA GHGRP in year t,EPA GHGRP
+us_gdp_growth,US real GDP growth rate (%),World Bank (NY.GDP.MKTP.KD.ZG)
+us_co2_per_capita,US CO₂ emissions per capita (metric tons),World Bank (EN.ATM.CO2E.PC)
+us_energy_use_per_capita,US energy use per capita (kg oil equivalent),World Bank (EG.USE.PCAP.KG.OE)
