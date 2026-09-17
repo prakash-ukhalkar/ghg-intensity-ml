@@ -1,22 +1,22 @@
 Sector Variance Decomposition (Random-Intercept MixedLM)
 ============================================================
 Target: scope1_intensity_rev
-N = 322, Sectors = 5
-Between-sector variance: 831554
-Within-sector (residual) variance: 1.11269e+07
-Intraclass correlation (share of variance between-sector): 0.0695
+N = 3055, Sectors = 10
+Between-sector variance: 0.00807394
+Within-sector (residual) variance: 0.325956
+Intraclass correlation (share of variance between-sector): 0.0242
 
               Mixed Linear Model Regression Results
 ==================================================================
 Model:            MixedLM Dependent Variable: scope1_intensity_rev
-No. Observations: 322     Method:             REML                
-No. Groups:       5       Scale:              11126883.6568       
-Min. group size:  14      Log-Likelihood:     -3064.9465          
-Max. group size:  182     Converged:          Yes                 
-Mean group size:  64.4                                            
--------------------------------------------------------------------
-                Coef.     Std.Err.    z    P>|z|   [0.025   0.975] 
--------------------------------------------------------------------
-Intercept       1431.723   498.708  2.871  0.004  454.274  2409.172
-Group Var     831554.063   299.232                                 
+No. Observations: 3055    Method:             REML                
+No. Groups:       10      Scale:              0.3260              
+Min. group size:  25      Log-Likelihood:     -2633.0790          
+Max. group size:  1264    Converged:          Yes                 
+Mean group size:  305.5                                           
+---------------------------------------------------------------------
+              Coef.    Std.Err.      z      P>|z|    [0.025    0.975]
+---------------------------------------------------------------------
+Intercept     0.100       0.033    3.022    0.003     0.035     0.165
+Group Var     0.008       0.009                                      
 ==================================================================
